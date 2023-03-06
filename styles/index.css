@@ -1,0 +1,21 @@
+html,
+body {
+    margin: 0;
+    text-align: center;
+}
+
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* ========
+Layout
+========= */
+
+
+.btn {
+    padding: .25em .5em;
+    cursor: pointer;
+}
