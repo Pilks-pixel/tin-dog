@@ -6,7 +6,8 @@ const dogs = [
         bio: "Art. Literature. Natural wine. Yoga.",
         hasBeenSwiped: false,
         hasBeenLiked: false
-    },{
+    },
+    {
         name: "Bella",
         avatar: "assets/dog-bella.jpg",
         age: 43,
