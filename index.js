@@ -13,14 +13,14 @@ function shuffle(arr) {
 }
 
 let currentPuppy,
-	shuffledDogs,
-	swipedDogs = [];
+	shuffledDogs
+const swipedDogs = new Map();
 
 
 
 // Event functions
 function nextDog(result) {
-	if (shuffledDogs.length <= 1) {
+	if (shuffledDogs.length <= 1) { 
 		return gameOver();
 	}
 
@@ -30,15 +30,20 @@ function nextDog(result) {
 	return render(result);
 }
 
+// ToDo
+// buttons not clickable if all dogs swiped
+
 function handleSwipe(e) {
 	let result = e.currentTarget.id == "like";
 
 	currentPuppy.setSwiped();
 	render(result);
 
-	currentPuppy.hasBeenLiked && currentPuppy.hasBeenSwiped
-		? (swipedDogs = [...swipedDogs, currentPuppy])
+	if (currentPuppy.hasBeenLiked && currentPuppy.hasBeenSwiped) {
+		!swipedDogs.has(currentPuppy.name) ?
+		swipedDogs.set(currentPuppy.name, currentPuppy)
 		: "";
+	}
 
 	setTimeout(nextDog, 1000, result);
 }
@@ -67,7 +72,10 @@ function gameOver() {
             	<p class='gameOver__message'>No more dogs!</p>
 				<h3>Matched</h3>
 				<ul>
-				${swipedDogs.map(dog => `<li>${dog.name}</li>`)}
+				${Array.from(swipedDogs).map(([key, value]) => `
+    				<li id='matched'>${value.name}</li>
+					`).join('')}
+
 				</ul>
             </div>
         `);
