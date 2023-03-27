@@ -9,7 +9,7 @@ class Dog {
 
 		return ` 
             <div class='profile__card'>
-            <img class='card__avatar' src='../${avatar}' alt='a dog' height="250px" width="auto" >
+            <img class='card__image' src='../${avatar}' alt='a dog' height="250px" width="auto" >
             ${status}
             <p class='card__heading'>${name} ${age}</p>
             <p class='card__bio'>${bio}</p>
@@ -29,7 +29,7 @@ class Dog {
 		}
 
 		return `
-        <img class='card__avatar' src='../assets/${status}' alt='status' height="250px" width="auto" >
+        <img class='card__status' src='../assets/${status}' alt='status' height="250px" width="auto" >
         `;
 	}
 

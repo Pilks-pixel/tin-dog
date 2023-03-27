@@ -28,7 +28,7 @@ body {
 	border: 2px solid black;
 	margin: 0 auto;
 	width: 80%;
-	max-width: 400px;
+	max-width: 350px;
 
 	display: grid;
 	grid-template-rows: 10% 1fr 20%;
@@ -50,9 +50,35 @@ header {
 	grid-area: dashboard;
 }
 
+/* rendered dog card */
 .profile__card {
-    width: 90%;
+    outline: 4px solid hotpink;
+    margin: 0 auto;
+    width: 95%;
 }
+
+.card__image {
+    position: relative;
+    width: 100%;
+    height: min(60vh, 450px); 
+   object-fit: cover;
+   z-index: 1;
+}
+
+.card__status {
+    position: absolute;
+    width: min(40%, 200px);
+    height: auto;
+    inset: -70px 0 0 -70px;
+    z-index: 2;
+    transform: rotate(-40deg);
+    animation: stamp 1000ms ease-in forwards;
+}
+
+@keyframes stamp {
+    100% {left: 100px; top:30%;}
+    }
+
 
 /* event buttons */
 .btn {

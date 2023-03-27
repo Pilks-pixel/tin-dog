@@ -45,7 +45,7 @@ function handleSwipe(e) {
 		: "";
 	}
 
-	setTimeout(nextDog, 1000, result);
+	setTimeout(nextDog, 2000, result);
 }
 
 // Event Listeners
