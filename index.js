@@ -48,32 +48,35 @@ function handleSwipe(e) {
 	setTimeout(nextDog, 1000, result);
 }
 
+// Event Listeners
+
 document.querySelector(".btn--reset").addEventListener("click", newGame);
 document.querySelector(".btn--reject").addEventListener("click", handleSwipe);
 document.querySelector(".btn--heart").addEventListener("click", handleSwipe);
 
 // HTML render functions
-function newGame() {
-	const dogDataArr = dogs.map(dog => new Dog(dog));
-	shuffledDogs = shuffle(dogDataArr);
-	currentPuppy = shuffledDogs[0];
-	render();
-}
-
-
 function render(result) {
 	document.getElementById("profile").innerHTML =
 		currentPuppy.getDogHtml(result);
 }
 
+function newGame() {
+	const dogDataArr = dogs.map(dog => new Dog(dog));
+	shuffledDogs = shuffle(dogDataArr);
+	console.log({shuffledDogs})
+	currentPuppy = shuffledDogs[0];
+	render();
+}
+
 function gameOver() {
+	console.log(Array.from(swipedDogs))
 	return (document.getElementById("profile").innerHTML = ` 
             <div class='gameOverContainer'>
-            	<p class='gameOver__message'>No more dogs!</p>
-				<h3>Matched</h3>
-				<ul>
-				${Array.from(swipedDogs).map(([key, value]) => `
-    				<li id='matched'>${value.name}</li>
+				<h3 class='gameOver__title'>Your Matched Dogs:</h3>
+				<ul gameOver__list>
+				${Array.from(swipedDogs).map(([key, value]) => 
+					`
+    				<li class='gameOverList__matched'>${value.name}</li>
 					`).join('')}
 
 				</ul>

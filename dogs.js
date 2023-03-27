@@ -3,10 +3,6 @@ class Dog {
 		Object.assign(this, dog);
 	}
 
-	speak() {
-		console.log(`Hello my name is ${this.name}`);
-	}
-
 	getDogHtml(result) {
 		const { avatar, name, age, bio, hasBeenSwiped } = this;
 		const status = hasBeenSwiped ? this.setLikedStatus(result) : "";
