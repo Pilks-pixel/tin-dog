@@ -11,8 +11,10 @@ class Dog {
             <div class='profile__card'>
             <img class='card__image' src='../${avatar}' alt='a dog' height="250px" width="auto" />
             ${status}
-            <p class='card__heading'>${name} ${age}</p>
-            <p class='card__bio'>${bio}</p>
+			<div class='card__bio'>
+            	<p class='card__heading'>${name} ${age}</p>
+            	<p>${bio}</p>
+			</div>
             </div>
         `;
 	}
