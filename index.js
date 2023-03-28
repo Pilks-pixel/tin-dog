@@ -80,6 +80,7 @@ function gameOver() {
 					`).join('')}
 
 				</ul>
+				<img class='gameOver__image' src='../assets/game_end_dog.png' alt='dog game ending picture' >
             </div>
         `);
 }

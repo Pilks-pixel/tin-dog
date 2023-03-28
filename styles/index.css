@@ -22,89 +22,121 @@ body {
 	background-image: url(../assets/wallpaper.jpg);
 	background-size: cover;
 	/* Image by starline on Freepik */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
 }
 
 .container {
-	border: 2px solid black;
-	margin: 0 auto;
-	width: 80%;
+	border-radius: 40px;
+	border: 8px solid #eaeaea;
+	box-shadow: 0px 5px 20px 3px;
+	width: 85%;
 	max-width: 350px;
-
-	display: grid;
-	grid-template-rows: 10% 1fr 20%;
-	grid-template-areas:
-		"header"
-		"profile"
-		"dashboard";
-}
-
-header {
-	grid-area: header;
-}
-
-#profile {
-	grid-area: profile;
+	height: 90%;
+	padding: 0.5em;
+	background-color: #fffff0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
 }
 
 .dashboard {
-	grid-area: dashboard;
+	margin-bottom: 0.5em;
 }
 
 /* rendered dog card */
 .profile__card {
-    outline: 4px solid hotpink;
-    margin: 0 auto;
-    width: 95%;
+	margin: 0 auto;
+	width: 95%;
+	height: auto;
 }
 
 .card__image {
-    position: relative;
-    width: 100%;
-    height: min(60vh, 450px); 
-   object-fit: cover;
-   z-index: 1;
+	position: relative;
+	width: 100%;
+	height: min(55vh, 450px);
+	object-fit: cover;
+	z-index: 1;
+	border-radius: 7.5px;
 }
 
 .card__status {
-    position: absolute;
-    width: min(40%, 200px);
-    height: auto;
-    inset: -70px 0 0 -70px;
-    z-index: 2;
-    transform: rotate(-40deg);
-    animation: stamp 1000ms ease-in forwards;
+	position: absolute;
+	width: min(40%, 200px);
+	height: auto;
+	inset: -70px 0 0 -70px;
+	z-index: 2;
+	transform: rotate(-40deg);
+	animation: stamp 1000ms ease-in forwards;
 }
 
 @keyframes stamp {
-    100% {left: 100px; top:30%;}
-    }
+	100% {
+		left: 100px;
+		top: 30%;
+	}
+}
 
+/* Game end card */
+
+.gameOverContainer {
+    background-color: rgba(230, 230, 250, 0.424);
+    height: min(55vh, 450px);
+    border-radius: 7.5px;
+    padding: 2em;
+}
+
+.gameOverContainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gameOver__image {
+    margin: .5em;
+    width: 120px;
+    height: auto;
+}
 
 /* event buttons */
 .btn {
-    margin: .25em;
-    padding: 0.5em;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0px 10px 10px #929297;
+	margin: 0.25em;
+	padding: 0.5em;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 0px 10px 10px #a4a7a7;
 	cursor: pointer;
 }
 
 .btn img {
-    margin:0 auto;
-    padding-top: 5px;
-    height: 70%;
-    width: auto;
+	margin: 0 auto;
+	padding-top: 5px;
+	height: 70%;
+	width: auto;
+}
+
+.btn--heart:hover {
+    background-color: #DBFFF4;
+}
+
+.btn--reject:hover {
+    background-color: #FFE7EF;
 }
 
 .btn--reset {
-    padding: 0;
-    border-radius: 20px;
-    background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
-    width: 4rem;
-    height: 2rem;
+	padding: 0;
+	border-radius: 20px;
+	background: linear-gradient(270deg, #fa695a 0%, #f83375 100%);
+	width: 4rem;
+	height: 2rem;
+}
+
+.btn--reset:hover {
+    background: linear-gradient(270deg, #fa6a5a33 0%, #58b2c2 100%);
 }
 
 /* =========
