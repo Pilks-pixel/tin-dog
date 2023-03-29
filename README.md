@@ -1,7 +1,7 @@
 # Tindog
 
 ![Tindog screenshot](./assets/screenshot.png)
-:rocket: **Deployed** with Netlify
+:rocket: **Deployed** with Netlify at https://6423fca0af4b8a7c707817a6--dog-lovers-app.netlify.app/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3bd2ceba-c82b-4c02-ad39-a5f0bd210cdf/deploy-status)](https://app.netlify.com/sites/roaring-starburst-e3170c/deploys)
 
@@ -9,6 +9,12 @@
 ## About
 
 Dog dating app made in vanilla javascript. The app demonstrates my knowledge of classes in JS, as well as DOM manipulation, events, maps and timeouts.
+
+
+## Wins
+
+-[x] Responsive, using modern CSS layout tools like flexbox and CSS functions such as min().
+
 
 ## Significant code
 ```javascript
