@@ -1,6 +1,6 @@
 :root {
-	--titles: 'Poppins', sans-serif;
-    --text: "Delicious Handrawn", cursive;
+	--titles: "Poppins", sans-serif;
+	--text: "Delicious Handrawn", cursive;
 }
 
 html,
@@ -43,14 +43,14 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .dashboard {
 	margin-bottom: 0.5em;
-    text-align: center;
+	text-align: center;
 }
 
 /* rendered dog card */
@@ -71,18 +71,19 @@ nav {
 
 .card__status,
 .card__bio {
-    position: absolute;
-    z-index: 2;
+	position: absolute;
+	z-index: 2;
 }
 
 .card__bio {
-    bottom: .75em;
-    left: 1em;
-} 
+	bottom: 0.75em;
+	left: 1em;
+}
 
 .card__bio p {
-    margin-top: 0em;
-    margin-bottom: .25em;
+	margin-top: 0em;
+	margin-bottom: 0.25em;
+	padding-right: 0.25em;
 }
 
 .card__status {
@@ -103,27 +104,27 @@ nav {
 /* Game end card */
 
 .gameOverContainer {
-    background-color: rgba(230, 230, 250, 0.424);
-    height: min(55vh, 450px);
-    border-radius: 7.5px;
-    padding: 2em;
-    text-align: center;
+	background-color: rgba(230, 230, 250, 0.424);
+	height: min(60vh, 450px);
+	border-radius: 7.5px;
+	padding: 1em;
+	text-align: center;
 }
 
 .gameOverContainer ul {
-    list-style-type: none;
-    padding: .25em;
-    margin: 0;
+	list-style-type: none;
+	padding: 0.25em;
+	margin: 0;
 }
 
 .gameOverContainer li {
-    padding: .25em;
+	padding: 0.25em;
 }
 
 .gameOver__image {
-    margin: .5em;
-    width: 120px;
-    height: auto;
+	margin: 0.5em;
+	width: 120px;
+	height: auto;
 }
 
 /* event buttons */
@@ -136,7 +137,7 @@ nav {
 	border: none;
 	box-shadow: 0px 10px 10px #a4a7a7;
 	cursor: pointer;
-    transition: background-color 500ms ease;
+	transition: background-color 500ms ease;
 }
 
 .btn img {
@@ -147,11 +148,11 @@ nav {
 }
 
 .btn--heart:hover {
-    background-color: #DBFFF4;
+	background-color: #dbfff4;
 }
 
 .btn--reject:hover {
-    background-color: #FFE7EF;
+	background-color: #ffe7ef;
 }
 
 .btn--reset {
@@ -163,7 +164,7 @@ nav {
 }
 
 .btn--reset:hover {
-    background-image: linear-gradient(270deg, #fa6a5a 0%,  pink 100%);
+	background-image: linear-gradient(270deg, #fa6a5a 0%, pink 100%);
 }
 
 /* =========
@@ -173,16 +174,16 @@ Typography
 .card__heading,
 .gameOverContainer {
 	font-family: var(--titles);
-    font-weight: 600;
-    text-transform: capitalize;
+	font-weight: 600;
+	text-transform: capitalize;
 }
 
 .card__bio,
 .gameOverContainer ul {
-    font-family: var(--text);
+	font-family: var(--text);
 }
 
 .card__heading,
 .card__bio {
-    color: whitesmoke;
+	color: whitesmoke;
 }
