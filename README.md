@@ -1,3 +1,19 @@
+# Tindog
+
+![Tindog screenshot](./assets/screenshot.png)
+:rocket: **Deployed** with Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3bd2ceba-c82b-4c02-ad39-a5f0bd210cdf/deploy-status)](https://app.netlify.com/sites/roaring-starburst-e3170c/deploys)
+
+
+## About
+
+Dog dating app made in vanilla javascript. The app demonstrates my knowledge of classes in JS, as well as DOM manipulation, events, maps and timeouts.
+
+## Significant code
+```javascript
+// Uses classes to create dogs with methods that set html in the game, depending on the users input
+
 class Dog {
 	constructor(dog) {
 		Object.assign(this, dog);
@@ -34,10 +50,4 @@ class Dog {
         <img class='card__status' src='../assets/${status}' alt='status' height="250px" width="auto" >
         `;
 	}
-
-	setSwiped() {
-		return (this.hasBeenSwiped = true);
-	}
-}
-
-export { Dog };
+  ```
